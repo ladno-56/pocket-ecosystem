@@ -125,7 +125,8 @@ private struct PixelGameView: UIViewRepresentable {
         }
 
         @objc private func handlePan(_ recognizer: UIPanGestureRecognizer) {
-            guard let view = recognizer.view, let scene, let camera = scene.cameraNode else { return }
+            guard let view = recognizer.view, let scene else { return }
+            let camera = scene.cameraNode
             let translation = recognizer.translation(in: view)
             if recognizer.state == .began {
                 previousPan = .zero
@@ -137,7 +138,8 @@ private struct PixelGameView: UIViewRepresentable {
         }
 
         @objc private func handlePinch(_ recognizer: UIPinchGestureRecognizer) {
-            guard let scene, let camera = scene.cameraNode else { return }
+            guard let scene else { return }
+            let camera = scene.cameraNode
             if recognizer.state == .began {
                 previousPinchScale = 1
             }
