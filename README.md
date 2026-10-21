@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # POCKET ECOSYSTEM
 
 Первая итерация — небольшой офлайн-прототип для iPhone на SwiftUI и SpriteKit. В нём можно перемещать и масштабировать камеру, а также размещать и убирать клетки земли касанием.
@@ -13,9 +12,11 @@
 
 ## Сборка через GitHub Actions
 
-Workflow `.github/workflows/ios-build.yml` запускается при push в `main` или `master`, создании pull request и вручную через **Actions → iOS Simulator Build → Run workflow**. Он собирает приложение и запускает тесты на macOS-раннере. Статус и журналы доступны в запуске workflow; приложение, журналы и результаты тестов скачиваются в разделе **Artifacts**.
+Workflow `.github/workflows/ios-build.yml` запускается при push в `main` или `master`, создании pull request и вручную через **Actions → iOS Build and Unsigned IPA → Run workflow**. Он собирает приложение для симулятора, запускает тесты и собирает отдельный unsigned `.ipa` для iPhone на macOS-раннере. Файл `PocketEcosystem-unsigned.ipa`, журналы и результаты тестов доступны в разделе **Artifacts** запуска workflow.
 
-Workflow собирает только приложение для симулятора и не выполняет подпись `.ipa`.
+Чтобы получить IPA: откройте успешный запуск workflow на вкладке **Actions**, скачайте artifact `pocket-ecosystem-ios-build`, распакуйте его и перенесите `PocketEcosystem-unsigned.ipa` на iPhone. Откройте IPA в TrollStore и выберите установку.
+
+IPA собирается без Apple Developer-сертификата для использования с TrollStore. Он не подписан для обычной установки через iOS или Xcode; совместимость установки зависит от модели iPhone, версии iOS и поддержки TrollStore на устройстве. Обычная установка на iPhone и распространение через TestFlight/App Store требуют соответствующей подписи Apple и provisioning profile.
 
 ## Управление в прототипе
 
@@ -27,7 +28,3 @@ Workflow собирает только приложение для симуля�
 ## Область текущей версии
 
 Реализован этап 1 плана: процедурная сетка из земли, травы, камня и пустых клеток, пиксельная отрисовка, жесты камеры и изменение клеток. Вода, растения, животные, прогрессия и сохранение будут добавляться в следующих этапах.
-=======
-# pocket-ecosystem
-Small ios game from a vibe-checking schoolkid
->>>>>>> 712533a60baf39f09a19b70b8eb86f623f6b957f
