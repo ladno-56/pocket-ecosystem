@@ -1,0 +1,170 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* PocketEcosystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* PocketEcosystemApp.swift */; };
+		A10000000000000000000002 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* GameScreen.swift */; };
+		A10000000000000000000003 /* WorldGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* WorldGrid.swift */; };
+		A10000000000000000000004 /* EcosystemScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* EcosystemScene.swift */; };
+		A10000000000000000000005 /* PixelWorldRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* PixelWorldRenderer.swift */; };
+		A10000000000000000000006 /* WorldGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* WorldGridTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D10000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F10000000000000000000001;
+			remoteInfo = PocketEcosystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B10000000000000000000001 /* PocketEcosystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketEcosystemApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* WorldGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldGrid.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* EcosystemScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcosystemScene.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* PixelWorldRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelWorldRenderer.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* WorldGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldGridTests.swift; sourceTree = "<group>"; };
+		C10000000000000000000001 /* PocketEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10000000000000000000002 /* PocketEcosystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketEcosystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		C30000000000000000000002 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B20000000000000000000001 = {
+			isa = PBXGroup;
+			children = (B20000000000000000000002 /* PocketEcosystem */, B20000000000000000000007 /* Tests */, B20000000000000000000008 /* Products */, );
+			sourceTree = "<group>";
+		};
+		B20000000000000000000002 /* PocketEcosystem */ = {
+			isa = PBXGroup;
+			path = PocketEcosystem;
+			sourceTree = "<group>";
+			children = (B20000000000000000000003 /* App */, B20000000000000000000004 /* UI */, B20000000000000000000005 /* World */, B20000000000000000000006 /* Game */, B20000000000000000000009 /* Rendering */, );
+		};
+		B20000000000000000000003 /* App */ = {isa = PBXGroup; path = App; sourceTree = "<group>"; children = (B10000000000000000000001 /* PocketEcosystemApp.swift */, ); };
+		B20000000000000000000004 /* UI */ = {isa = PBXGroup; path = UI; sourceTree = "<group>"; children = (B10000000000000000000002 /* GameScreen.swift */, ); };
+		B20000000000000000000005 /* World */ = {isa = PBXGroup; path = World; sourceTree = "<group>"; children = (B10000000000000000000003 /* WorldGrid.swift */, ); };
+		B20000000000000000000006 /* Game */ = {isa = PBXGroup; path = Game; sourceTree = "<group>"; children = (B10000000000000000000004 /* EcosystemScene.swift */, ); };
+		B20000000000000000000007 /* Tests */ = {isa = PBXGroup; path = Tests; sourceTree = "<group>"; children = (B10000000000000000000006 /* WorldGridTests.swift */, ); };
+		B20000000000000000000008 /* Products */ = {isa = PBXGroup; name = Products; sourceTree = "<group>"; children = (C10000000000000000000001 /* PocketEcosystem.app */, C10000000000000000000002 /* PocketEcosystemTests.xctest */, ); };
+		B20000000000000000000009 /* Rendering */ = {isa = PBXGroup; path = Rendering; sourceTree = "<group>"; children = (B10000000000000000000005 /* PixelWorldRenderer.swift */, ); };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F10000000000000000000001 /* PocketEcosystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = G10000000000000000000001;
+			buildPhases = (C40000000000000000000001 /* Sources */, C30000000000000000000001 /* Frameworks */, C50000000000000000000001 /* Resources */, );
+			buildRules = ();
+			dependencies = ();
+			name = PocketEcosystem;
+			productName = PocketEcosystem;
+			productReference = C10000000000000000000001 /* PocketEcosystem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F10000000000000000000002 /* PocketEcosystemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = G10000000000000000000002;
+			buildPhases = (C40000000000000000000002 /* Sources */, C30000000000000000000002 /* Frameworks */, C50000000000000000000002 /* Resources */, );
+			buildRules = ();
+			dependencies = (D20000000000000000000001 /* PBXTargetDependency */, );
+			name = PocketEcosystemTests;
+			productName = PocketEcosystemTests;
+			productReference = C10000000000000000000002 /* PocketEcosystemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 1600; };
+			buildConfigurationList = G10000000000000000000003;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base, );
+			mainGroup = B20000000000000000000001;
+			productRefGroup = B20000000000000000000008 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (F10000000000000000000001 /* PocketEcosystem */, F10000000000000000000002 /* PocketEcosystemTests */, );
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C50000000000000000000001 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		C50000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C40000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (A10000000000000000000001 /* PocketEcosystemApp.swift in Sources */, A10000000000000000000002 /* GameScreen.swift in Sources */, A10000000000000000000003 /* WorldGrid.swift in Sources */, A10000000000000000000004 /* EcosystemScene.swift in Sources */, A10000000000000000000005 /* PixelWorldRenderer.swift in Sources */, );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C40000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (A10000000000000000000006 /* WorldGridTests.swift in Sources */, );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D20000000000000000000001 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = F10000000000000000000001 /* PocketEcosystem */; targetProxy = D10000000000000000000001 /* PBXContainerItemProxy */; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		G20000000000000000000001 /* Debug app */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = ""; CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketEcosystem; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1"; };
+			name = Debug;
+		};
+		G20000000000000000000002 /* Release app */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketEcosystem; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1"; };
+			name = Release;
+		};
+		G20000000000000000000003 /* Debug tests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketEcosystemTests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketEcosystem.app/PocketEcosystem"; };
+			name = Debug;
+		};
+		G20000000000000000000004 /* Release tests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketEcosystemTests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketEcosystem.app/PocketEcosystem"; };
+			name = Release;
+		};
+		G20000000000000000000005 /* Debug project */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; };
+			name = Debug;
+		};
+		G20000000000000000000006 /* Release project */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; };
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		G10000000000000000000001 /* Build configuration list for app */ = {isa = XCConfigurationList; buildConfigurations = (G20000000000000000000001 /* Debug app */, G20000000000000000000002 /* Release app */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		G10000000000000000000002 /* Build configuration list for tests */ = {isa = XCConfigurationList; buildConfigurations = (G20000000000000000000003 /* Debug tests */, G20000000000000000000004 /* Release tests */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		G10000000000000000000003 /* Build configuration list for project */ = {isa = XCConfigurationList; buildConfigurations = (G20000000000000000000005 /* Debug project */, G20000000000000000000006 /* Release project */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = E10000000000000000000001 /* Project object */;
+}

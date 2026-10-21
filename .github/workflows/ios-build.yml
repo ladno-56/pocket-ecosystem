@@ -1,0 +1,69 @@
+name: iOS Simulator Build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          xcodebuild -version
+
+      - name: Locate and validate project and scheme
+        run: |
+          set -euo pipefail
+          PROJECT="$(find . -maxdepth 3 -name '*.xcodeproj' -print -quit)"
+          test -n "$PROJECT"
+          xcodebuild -list -project "$PROJECT" | tee project-list.log
+          grep -q 'PocketEcosystem' project-list.log
+          echo "PROJECT=$PROJECT" >> "$GITHUB_ENV"
+          mkdir -p build
+
+      - name: Build for iOS Simulator
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project "$PROJECT" \
+            -scheme PocketEcosystem \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build/DerivedData \
+            build 2>&1 | tee build/build.log
+
+      - name: Run tests
+        run: |
+          set -euo pipefail
+          SIMULATOR_UDID="$(python3 -c 'import json, subprocess; data=json.loads(subprocess.check_output(["xcrun", "simctl", "list", "devices", "available", "-j"])); devices=[d["udid"] for group in data["devices"].values() for d in group if d["name"].startswith("iPhone")]; print(devices[0] if devices else "")')"
+          test -n "$SIMULATOR_UDID"
+          xcodebuild \
+            -project "$PROJECT" \
+            -scheme PocketEcosystem \
+            -destination "platform=iOS Simulator,id=$SIMULATOR_UDID" \
+            -derivedDataPath build/DerivedData \
+            -resultBundlePath build/TestResults.xcresult \
+            test 2>&1 | tee build/test.log
+
+      - name: Upload app, test results, and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocket-ecosystem-ios-build
+          path: |
+            build/DerivedData/Build/Products/Debug-iphonesimulator/PocketEcosystem.app
+            build/build.log
+            build/test.log
+            build/TestResults.xcresult
+            project-list.log
+          if-no-files-found: warn
+          retention-days: 14
